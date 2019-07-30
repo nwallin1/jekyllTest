@@ -3,6 +3,10 @@
 
 This is a Test Repository to Learn how to use Jekyll both on GitHub as well as my local device.
 
+* Navigate this README
+    * <a href="#ongit"> Using Jekyll on GitHub</a>
+    * <a href="#locally"> Setting up Jekyll Locally</a>
+    * <a href="#usingjekyll">Using Jekyll</a>
 <hr>
 
 ## Using Jekyll on GitHub (http://jmcglone.com/guides/github-pages/)
@@ -11,16 +15,14 @@ There are only a few basic steps you need to follow to get started with jekyll.
     * <a href="#1">Step 1:</a> Create an index.html file
     * <a href="#2">Step 2:</a> Make .gitignore and config.yml Files
     * <a href="#3">Step 3:</a> Create a _layouts folder with a default.html
-    * <a href="#4">Step 4:</a> 
 
-
---- 
+<hr>
 **NOTE THAT I AM USING USING THE /docs SETUP TO USE GITHUB PAGES**
 This means that my github pages site is located in the master/docs folder. To Access my site I type:
 http://nwallin1.github.io/${repository_name}    - Where repository_name is the name of the repository.
 This just allows me to make multiple websites on different repositories on github.
 For instructions on how to use github pages please go here: https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages
----
+<hr>
 
 
 
@@ -29,7 +31,6 @@ For instructions on how to use github pages please go here: https://help.github.
 #### Create index.html file
 
 * Create a File called index.html: Example file below (Mine is made in master/docs due to my github pages configuration, see https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
-
 <code><pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -120,9 +121,9 @@ title: My Home Page
                 * The <code>---</code> is called Front Matter and indicates that jekyll should treat this as a special file. (See https://jekyllrb.com/docs/front-matter/)
                 * Our layout: default line means that we will be using our default.html page in _layouts as a <code>template for index.html</code>. Remember the <code>{{ page.title }}</code> tag in default.html? Well here when we say define our <code>title: My Home Page</code>, default.html will insert "My Home Page" for <code>{{ page.title }}</code>
                 * The <code>{{ content }}</code> tag will insert anything below the bottom <code>---</code> into default.html. Save all the files and take a look at the new webpage. It should look the same! (Note that GitHub pages sometimes takes awhile to process changes in the source files so give it a minute or two between changes)
-<div id="4"></div>
 
 
+<div id="locally"></div>
 
 ## Setting Up Jekyll Locally
 
@@ -134,6 +135,8 @@ Since I'm using VisualStudio Code I downloaded the following extension for debug
 Provides Ruby Language and debugging
 ###### Extension 2: "Jekyll Snippits" "Jekyll Syntax Support" (optional most likely)
 Provides useful? Jekyll snippits and syntax. I didn't try using jekyll without downloading these so I'm not sure if they added useful/required functionality or not so you can try using VSCode without them
+
+<div id="usingjekyll"></div>
 
 ## Using Jekyll (https://jekyllrb.com/docs/step-by-step/01-setup/)
 Now lets get into using Jekyll Locally. First we will install jekyll.
@@ -149,7 +152,7 @@ After this step whenever you want to use jekyll in a project you just have to in
 Jekyll will now be available for use in your project!
 
 *** After following these steps any jekyll command you run can be prefixed with <code>bundle exec</code>
-Example: <code>bundle exex jekyll build</code>
+Example: <code>bundle exec jekyll build</code>
 
 #### Jekyll Commands
 
