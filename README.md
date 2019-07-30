@@ -53,7 +53,7 @@ For instructions on how to use github pages please go here: https://help.github.
 &lt;/body&gt;
 
 &lt;/html&gt;
-&lt;/pre&gt;&lt;/code&gt;
+</pre></code>
 <div id="2"></div>
 
 #### Making .gitignore and config.yml Files
