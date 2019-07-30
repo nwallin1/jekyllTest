@@ -30,7 +30,7 @@ For instructions on how to use github pages please go here: https://help.github.
 
 * Create a File called index.html: Example file below (Mine is made in master/docs due to my github pages configuration, see https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
-<code>
+<code><pre>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +53,7 @@ For instructions on how to use github pages please go here: https://help.github.
 </body>
 
 </html>
-</code>
+</pre></code>
 <div id="2"></div>
 
 #### Making .gitignore and config.yml Files
@@ -82,7 +82,7 @@ For instructions on how to use github pages please go here: https://help.github.
     * Inside the _layouts folder create a file called default.html
         * We are going to insert inside default.html information that will be similar between all of the different pages/tabs in our site. For example the Home Page and the About Page will both contain the same nav bar as well as footer.
         * Lets add to our default.html file the constant information from our index.html file:
-            * <code>
+            * <code><pre>
                 <!DOCTYPE html>
                 <html>
                 <head>
@@ -104,11 +104,11 @@ For instructions on how to use github pages please go here: https://help.github.
                 <footer><a href="https://github.com/nwallin1">github.com/nwallin1</a></footer>
                 </body>
                 </html>
-                </code>
+                </pre></code>
         * Note the <code>page.title</code> and <code>content</code> tags. We will understand these in a bit.
         * Now we can edit our index.html to use deafult.html as a template.
             * Go to index.html and change it to:
-                * <code>
+                * <code><pre>
                     ---
                     layout: default
                     title: My Home Page
@@ -116,7 +116,7 @@ For instructions on how to use github pages please go here: https://help.github.
                     <div class="container">
                         <p>This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!</p>
                     </div>
-                    </code>
+                    </pre></code>
                 * The <code>---</code> is called Front Matter and indicates that jekyll should treat this as a special file. (See https://jekyllrb.com/docs/front-matter/)
                 * Our layout: default line means that we will be using our default.html page in _layouts as a <code>template for index.html</code>. Remember the <code>{{ page.title }}</code> tag in default.html? Well here when we say define our <code>title: My Home Page</code>, default.html will insert "My Home Page" for <code>{{ page.title }}</code>
                 * The <code>{{ content }}</code> tag will insert anything below the bottom <code>---</code> into default.html. Save all the files and take a look at the new webpage. It should look the same! (Note that GitHub pages sometimes takes awhile to process changes in the source files so give it a minute or two between changes)
