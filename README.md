@@ -108,15 +108,15 @@ For instructions on how to use github pages please go here: https://help.github.
         * Note the <code>page.title</code> and <code>content</code> tags. We will understand these in a bit.
         * Now we can edit our index.html to use deafult.html as a template.
             * Go to index.html and change it to:
-                * <code><pre>
-                    ---
-                    layout: default
-                    title: My Home Page
-                    ---
-                    &lt;div class="container"&gt;
-                        &lt;p&gt;This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!&lt;/p&gt;
-                    &lt;/div&gt;
-                    </pre></code>
+<code><pre>
+<code>---
+layout: default
+title: My Home Page
+---</code>
+&lt;div class="container"&gt;
+&lt;p&gt;This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!&lt;/p&gt;
+&lt;/div&gt;
+</pre></code>
                 * The <code>---</code> is called Front Matter and indicates that jekyll should treat this as a special file. (See https://jekyllrb.com/docs/front-matter/)
                 * Our layout: default line means that we will be using our default.html page in _layouts as a <code>template for index.html</code>. Remember the <code>{{ page.title }}</code> tag in default.html? Well here when we say define our <code>title: My Home Page</code>, default.html will insert "My Home Page" for <code>{{ page.title }}</code>
                 * The <code>{{ content }}</code> tag will insert anything below the bottom <code>---</code> into default.html. Save all the files and take a look at the new webpage. It should look the same! (Note that GitHub pages sometimes takes awhile to process changes in the source files so give it a minute or two between changes)
