@@ -3,10 +3,12 @@
 
 This is a Test Repository to Learn how to use Jekyll both on GitHub as well as my local device.
 
-## Using Jekyll on Git(http://jmcglone.com/guides/github-pages/)
+<hr>
+
+## Using Jekyll on GitHub (http://jmcglone.com/guides/github-pages/)
 There are only a few basic steps you need to follow to get started with jekyll.
-* Sizes
-    * Hello
+* Steps:
+    * 
 
 ## Setting Up Jekyll Locally
 
