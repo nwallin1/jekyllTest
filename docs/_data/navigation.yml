@@ -1,0 +1,6 @@
+- name: Home
+  link: /jekyllTest
+- name: About
+  link: /jekyllTest/about
+- name: Blog
+  link: /jekyllTest/blog
