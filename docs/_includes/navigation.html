@@ -1,11 +1,13 @@
 <nav>
-  <a href="/jekyllTest" {% if page.url == "/" %}style="color: red;"{% endif %}>
+  <ul>
+    <li><a href="/jekyllTest" {% if page.url == "/" %}style="color: red;"{% endif %}>
     Home
-  </a>
-  <a href="/jekyllTest/about" {% if page.url == "/about.html" %}style="color: red;"{% endif %}>
+      </a></li>
+    <li><a href="/jekyllTest/about" {% if page.url == "/about.html" %}style="color: red;"{% endif %}>
     About
-  </a>
-  <a href="/jekyllTest/blog" {% if page.url == "/about.html" %}style="color: red;"{% endif %}>
-    About
-  </a>
+    </a></li>
+    <li><a href="/jekyllTest/blog" {% if page.url == "/about.html" %}style="color: red;"{% endif %}>
+    Blog
+      </a></li>
+  </ul>
 </nav>
