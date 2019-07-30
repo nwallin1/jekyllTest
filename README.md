@@ -31,29 +31,29 @@ For instructions on how to use github pages please go here: https://help.github.
 * Create a File called index.html: Example file below (Mine is made in master/docs due to my github pages configuration, see https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
 <code><pre>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Website</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/cv">CV</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <p>This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!</p>
-    </div>
-    <footer><a href="https://github.com/nwallin1">github.com/nwallin1</a></footer>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/cv"&gt;CV&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div class="container"&gt;
+        &lt;p&gt;This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;&lt;a href="https://github.com/nwallin1"&gt;github.com/nwallin1&lt;/a&gt;&lt;/footer&gt;
     
-</body>
+&lt;/body&gt;
 
-</html>
-</pre></code>
+&lt;/html&gt;
+&lt;/pre&gt;&lt;/code&gt;
 <div id="2"></div>
 
 #### Making .gitignore and config.yml Files
@@ -83,27 +83,27 @@ For instructions on how to use github pages please go here: https://help.github.
         * We are going to insert inside default.html information that will be similar between all of the different pages/tabs in our site. For example the Home Page and the About Page will both contain the same nav bar as well as footer.
         * Lets add to our default.html file the constant information from our index.html file:
             * <code><pre>
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <!-- Note this -->
-                    <title> {{ page.title }} </title>
-                </head>
-                <body>
-                <nav>
-                <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/blog">Blog</a></li>
-                </ul>
-                </nav>
-                    <!-- And this -->
+                &gt;!DOCTYPE html&gt;
+                &gt;html&gt;
+                &gt;head&gt;
+                    &gt;!-- Note this --&gt;
+                    &gt;title&gt; {{ page.title }} &gt;/title&gt;
+                &gt;/head&gt;
+                &gt;body&gt;
+                &gt;nav&gt;
+                &gt;ul&gt;
+                &gt;li&gt;&gt;a href="/"&gt;Home&gt;/a&gt;&gt;/li&gt;
+                &gt;li&gt;&gt;a href="/about"&gt;About&gt;/a&gt;&gt;/li&gt;
+                &gt;li&gt;&gt;a href="/cv"&gt;CV&gt;/a&gt;&gt;/li&gt;
+                &gt;li&gt;&gt;a href="/blog"&gt;Blog&gt;/a&gt;&gt;/li&gt;
+                &gt;/ul&gt;
+                &gt;/nav&gt;
+                    &gt;!-- And this --&gt;
                     {{ content }}
 
-                <footer><a href="https://github.com/nwallin1">github.com/nwallin1</a></footer>
-                </body>
-                </html>
+                &gt;footer&gt;&gt;a href="https://github.com/nwallin1"&gt;github.com/nwallin1&gt;/a&gt;&gt;/footer&gt;
+                &gt;/body&gt;
+                &gt;/html&gt;
                 </pre></code>
         * Note the <code>page.title</code> and <code>content</code> tags. We will understand these in a bit.
         * Now we can edit our index.html to use deafult.html as a template.
@@ -113,9 +113,9 @@ For instructions on how to use github pages please go here: https://help.github.
                     layout: default
                     title: My Home Page
                     ---
-                    <div class="container">
-                        <p>This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!</p>
-                    </div>
+                    &lt;div class="container"&gt;
+                        &lt;p&gt;This is my Website! One day it will have lots of cool features, and building it will be super quick and easy thanks to @jekyll!&lt;/p&gt;
+                    &lt;/div&gt;
                     </pre></code>
                 * The <code>---</code> is called Front Matter and indicates that jekyll should treat this as a special file. (See https://jekyllrb.com/docs/front-matter/)
                 * Our layout: default line means that we will be using our default.html page in _layouts as a <code>template for index.html</code>. Remember the <code>{{ page.title }}</code> tag in default.html? Well here when we say define our <code>title: My Home Page</code>, default.html will insert "My Home Page" for <code>{{ page.title }}</code>
